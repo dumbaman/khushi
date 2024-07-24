@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine forever</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(245, 179, 233);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            margin-left: 100px;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no-button {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My mine forever tadow?</h1>
+        <button class="button yes-button" onclick="redirectToYesPage()">Yes</button>
+        <button class="button no-button">No</button>
+    </div>
+
+    <script>
+        const noButton = document.querySelector('.no-button');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        function redirectToYesPage() {
+            window.location.href = 'yes.html';
+        }
+    </script>
+</body>
+</html>
